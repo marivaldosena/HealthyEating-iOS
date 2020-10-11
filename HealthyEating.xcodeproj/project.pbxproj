@@ -58,13 +58,21 @@
 			children = (
 				C99CAD92253360F300B05C5F /* AppDelegate.swift */,
 				C99CAD94253360F300B05C5F /* SceneDelegate.swift */,
-				C99CAD96253360F300B05C5F /* ViewController.swift */,
-				C99CAD98253360F300B05C5F /* Main.storyboard */,
+				C99CADA72533657800B05C5F /* Home */,
 				C99CAD9B2533610B00B05C5F /* Assets.xcassets */,
 				C99CAD9D2533610B00B05C5F /* LaunchScreen.storyboard */,
 				C99CADA02533610B00B05C5F /* Info.plist */,
 			);
 			path = HealthyEating;
+			sourceTree = "<group>";
+		};
+		C99CADA72533657800B05C5F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C99CAD96253360F300B05C5F /* ViewController.swift */,
+				C99CAD98253360F300B05C5F /* Main.storyboard */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
