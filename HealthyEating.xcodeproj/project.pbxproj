@@ -13,6 +13,10 @@
 		C99CAD9A253360F300B05C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99CAD98253360F300B05C5F /* Main.storyboard */; };
 		C99CAD9C2533610B00B05C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99CAD9B2533610B00B05C5F /* Assets.xcassets */; };
 		C99CAD9F2533610B00B05C5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99CAD9D2533610B00B05C5F /* LaunchScreen.storyboard */; };
+		C99CADAD253381ED00B05C5F /* FruitsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99CADAC253381ED00B05C5F /* FruitsListViewController.swift */; };
+		C99CADB02533821B00B05C5F /* FruitsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99CADAF2533821B00B05C5F /* FruitsList.storyboard */; };
+		C99CADB7253384C100B05C5F /* FruitsListHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99CADB6253384C100B05C5F /* FruitsListHeaderViewController.swift */; };
+		C99CADCE253397C200B05C5F /* FruitsListSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99CADCD253397C200B05C5F /* FruitsListSearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		C99CAD9B2533610B00B05C5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C99CAD9E2533610B00B05C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C99CADA02533610B00B05C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C99CADAC253381ED00B05C5F /* FruitsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListViewController.swift; sourceTree = "<group>"; };
+		C99CADAF2533821B00B05C5F /* FruitsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitsList.storyboard; sourceTree = "<group>"; };
+		C99CADB6253384C100B05C5F /* FruitsListHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListHeaderViewController.swift; sourceTree = "<group>"; };
+		C99CADCD253397C200B05C5F /* FruitsListSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListSearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +64,10 @@
 		C99CAD91253360F300B05C5F /* HealthyEating */ = {
 			isa = PBXGroup;
 			children = (
+				C99CADAB253381BA00B05C5F /* FruitsList */,
+				C99CADA72533657800B05C5F /* Home */,
 				C99CAD92253360F300B05C5F /* AppDelegate.swift */,
 				C99CAD94253360F300B05C5F /* SceneDelegate.swift */,
-				C99CADA72533657800B05C5F /* Home */,
 				C99CAD9B2533610B00B05C5F /* Assets.xcassets */,
 				C99CAD9D2533610B00B05C5F /* LaunchScreen.storyboard */,
 				C99CADA02533610B00B05C5F /* Info.plist */,
@@ -69,10 +78,37 @@
 		C99CADA72533657800B05C5F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C99CAD96253360F300B05C5F /* ViewController.swift */,
 				C99CAD98253360F300B05C5F /* Main.storyboard */,
+				C99CAD96253360F300B05C5F /* ViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C99CADAB253381BA00B05C5F /* FruitsList */ = {
+			isa = PBXGroup;
+			children = (
+				C99CADB92533903600B05C5F /* FruitsListSearchBar */,
+				C99CADB42533824600B05C5F /* FruitsListHeader */,
+				C99CADAF2533821B00B05C5F /* FruitsList.storyboard */,
+				C99CADAC253381ED00B05C5F /* FruitsListViewController.swift */,
+			);
+			path = FruitsList;
+			sourceTree = "<group>";
+		};
+		C99CADB42533824600B05C5F /* FruitsListHeader */ = {
+			isa = PBXGroup;
+			children = (
+				C99CADB6253384C100B05C5F /* FruitsListHeaderViewController.swift */,
+			);
+			path = FruitsListHeader;
+			sourceTree = "<group>";
+		};
+		C99CADB92533903600B05C5F /* FruitsListSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				C99CADCD253397C200B05C5F /* FruitsListSearchBar.swift */,
+			);
+			path = FruitsListSearchBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99CAD9F2533610B00B05C5F /* LaunchScreen.storyboard in Resources */,
+				C99CADB02533821B00B05C5F /* FruitsList.storyboard in Resources */,
 				C99CAD9C2533610B00B05C5F /* Assets.xcassets in Resources */,
 				C99CAD9A253360F300B05C5F /* Main.storyboard in Resources */,
 			);
@@ -146,8 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99CAD97253360F300B05C5F /* ViewController.swift in Sources */,
+				C99CADAD253381ED00B05C5F /* FruitsListViewController.swift in Sources */,
 				C99CAD93253360F300B05C5F /* AppDelegate.swift in Sources */,
 				C99CAD95253360F300B05C5F /* SceneDelegate.swift in Sources */,
+				C99CADCE253397C200B05C5F /* FruitsListSearchBar.swift in Sources */,
+				C99CADB7253384C100B05C5F /* FruitsListHeaderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
