@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q1p-ee-jzY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Food List View Controller-->
         <scene sceneID="HL4-bc-Ch0">
             <objects>
-                <viewController id="Q1p-ee-jzY" sceneMemberID="viewController">
+                <viewController id="Q1p-ee-jzY" customClass="FoodListViewController" customModule="HealthyEating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x4f-sw-ONW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfp-Xi-zT8" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="15" width="414" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywq-Ft-yhM" userLabel="ShowMenuButton">
                                         <rect key="frame" x="20" y="26" width="48" height="48"/>
@@ -33,7 +32,7 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-lv-vF3" userLabel="GoToCartButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-lv-vF3" userLabel="GoToCartButton" customClass="RoundedButton" customModule="HealthyEating" customModuleProvider="target">
                                         <rect key="frame" x="346" y="26" width="48" height="48"/>
                                         <color key="backgroundColor" name="PrimaryColor"/>
                                         <constraints>
@@ -45,6 +44,11 @@
                                         <state key="normal" image="cart.fill" catalog="system">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -57,16 +61,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Dk-gK-455" userLabel="AppHeadingTextView">
-                                <rect key="frame" x="5" y="96" width="404" height="49"/>
+                                <rect key="frame" x="5" y="111" width="404" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fresh fruits!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtQ-MW-23K">
-                                        <rect key="frame" x="12" y="2" width="120" height="45"/>
+                                        <rect key="frame" x="12" y="2" width="120" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fresh time!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOF-EG-KOa">
-                                        <rect key="frame" x="144" y="2" width="101" height="45"/>
+                                        <rect key="frame" x="144" y="2" width="101" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -105,49 +109,30 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tRJ-zy-FER" userLabel="FoodCategoriesCollectionView">
-                                <rect key="frame" x="20" y="231" width="374" height="70"/>
+                                <rect key="frame" x="20" y="231" width="374" height="120"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="o0u-Jh-vX5"/>
+                                    <constraint firstAttribute="height" constant="120" id="RHv-Hz-Glw"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HWc-Ko-SIc">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HWc-Ko-SIc">
                                     <size key="itemSize" width="128" height="67"/>
+                                    <size key="estimatedItemSize" width="120" height="70"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FoodCategoryCollectionViewCell" id="1pO-Wy-OdA" customClass="FoodCategoryCollectionViewCell" customModule="HealthyEating" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="67"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0oX-G7-fyM">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="67"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="128" height="67"/>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cjl-Hz-wzs" userLabel="FoodItems">
-                                <rect key="frame" x="20" y="410" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VGR-ce-cK1">
+                                <rect key="frame" x="16" y="371" width="382" height="491"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4pd-CJ-086">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uTT-tO-ZgA">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FoodItemCollectionViewCell" id="6HX-Kj-fqb" customClass="FoodItemCollectionViewCell" customModule="HealthyEating" customModuleProvider="target">
-                                        <rect key="frame" x="56" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HLc-JZ-90s">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k5l-Si-Raz"/>
@@ -156,24 +141,37 @@
                             <constraint firstItem="1Dk-gK-455" firstAttribute="leading" secondItem="k5l-Si-Raz" secondAttribute="leading" constant="5" id="04S-kN-UDJ"/>
                             <constraint firstItem="FAP-yN-TFZ" firstAttribute="trailing" secondItem="k5l-Si-Raz" secondAttribute="trailing" id="7vS-px-1Pj"/>
                             <constraint firstItem="FAP-yN-TFZ" firstAttribute="top" secondItem="1Dk-gK-455" secondAttribute="bottom" constant="20" id="CPp-wR-n8g"/>
-                            <constraint firstItem="k5l-Si-Raz" firstAttribute="trailing" secondItem="tRJ-zy-FER" secondAttribute="trailing" constant="20" id="JgK-HU-cY4"/>
+                            <constraint firstItem="k5l-Si-Raz" firstAttribute="bottom" secondItem="VGR-ce-cK1" secondAttribute="bottom" id="FMw-wT-JDv"/>
+                            <constraint firstItem="tRJ-zy-FER" firstAttribute="trailing" secondItem="k5l-Si-Raz" secondAttribute="trailing" constant="-20" id="JgK-HU-cY4"/>
                             <constraint firstItem="pfp-Xi-zT8" firstAttribute="trailing" secondItem="x4f-sw-ONW" secondAttribute="trailing" id="L96-nM-Mp2"/>
                             <constraint firstItem="tRJ-zy-FER" firstAttribute="top" secondItem="FAP-yN-TFZ" secondAttribute="bottom" constant="16" id="M1o-Ce-qU3"/>
+                            <constraint firstItem="k5l-Si-Raz" firstAttribute="trailing" secondItem="VGR-ce-cK1" secondAttribute="trailing" constant="16" id="Qug-d0-PiV"/>
                             <constraint firstItem="tRJ-zy-FER" firstAttribute="leading" secondItem="k5l-Si-Raz" secondAttribute="leading" constant="20" id="RF0-kl-078"/>
+                            <constraint firstItem="VGR-ce-cK1" firstAttribute="leading" secondItem="k5l-Si-Raz" secondAttribute="leading" constant="16" id="Rmx-aM-nIE"/>
                             <constraint firstItem="1Dk-gK-455" firstAttribute="bottom" secondItem="k5l-Si-Raz" secondAttribute="bottom" constant="-717" id="coI-3m-bc6"/>
-                            <constraint firstItem="pfp-Xi-zT8" firstAttribute="top" secondItem="x4f-sw-ONW" secondAttribute="top" id="eEF-rD-dol"/>
+                            <constraint firstItem="pfp-Xi-zT8" firstAttribute="top" secondItem="x4f-sw-ONW" secondAttribute="top" constant="15" id="eEF-rD-dol"/>
                             <constraint firstItem="pfp-Xi-zT8" firstAttribute="leading" secondItem="x4f-sw-ONW" secondAttribute="leading" id="jBf-lM-E0d"/>
                             <constraint firstItem="1Dk-gK-455" firstAttribute="trailing" secondItem="k5l-Si-Raz" secondAttribute="trailing" constant="-5" id="n9Q-xO-9uL"/>
+                            <constraint firstItem="VGR-ce-cK1" firstAttribute="top" secondItem="tRJ-zy-FER" secondAttribute="bottom" constant="20" id="nFt-2U-GrY"/>
                             <constraint firstItem="1Dk-gK-455" firstAttribute="top" secondItem="pfp-Xi-zT8" secondAttribute="bottom" constant="16" id="qF2-vY-RO4"/>
                             <constraint firstItem="FAP-yN-TFZ" firstAttribute="leading" secondItem="k5l-Si-Raz" secondAttribute="leading" id="s3I-GD-clV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="foodCategoriesListCollection" destination="tRJ-zy-FER" id="Mk6-Gc-HPB"/>
+                        <outlet property="foodItemsListCollection" destination="VGR-ce-cK1" id="IqZ-y2-qsX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMg-Jo-yPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-391.304347826087" y="130.58035714285714"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Tx8-lv-vF3">
+            <size key="intrinsicContentSize" width="23" height="24"/>
+        </designable>
+    </designables>
     <resources>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="text.justify" catalog="system" width="128" height="100"/>

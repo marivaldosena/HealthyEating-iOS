@@ -9,6 +9,8 @@ import UIKit
 
 @IBDesignable
 class FoodCategoryCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var foodCategoryLabel: UILabel?
+    @IBOutlet weak var viewContainer: UIView?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +24,14 @@ class FoodCategoryCollectionViewCell: UICollectionViewCell {
             layer.masksToBounds = cornerRadius > 0
         }
     }
-
+    
+    func configure(with item: FoodCategory) {
+        self.clearFields()
+        
+        foodCategoryLabel?.text = item.categoryName
+    }
+    
+    func clearFields() {
+        foodCategoryLabel?.text = ""
+    }
 }

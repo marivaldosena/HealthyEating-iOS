@@ -43,6 +43,7 @@ class FoodListSearchBar: UISearchBar {
                 
                 //Magnifying glass
                 glassIconView.image = glassIconView.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+                glassIconView.contentMode = .redraw
                 glassIconView.backgroundColor = iconBackGroundColor
             }
         }

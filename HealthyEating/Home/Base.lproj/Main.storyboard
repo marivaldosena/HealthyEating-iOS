@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HealthyEating" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="HealthyEating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0iY-Da-kUY" userLabel="VisibleView">
                                 <rect key="frame" x="0.0" y="294" width="414" height="568"/>
                                 <subviews>
-                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzQ-lO-IdL">
+                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzQ-lO-IdL" customClass="RoundedButton" customModule="HealthyEating" customModuleProvider="target">
                                         <rect key="frame" x="16" y="428" width="382" height="70"/>
                                         <color key="backgroundColor" name="PrimaryColor"/>
                                         <constraints>
@@ -40,6 +40,14 @@
                                         <state key="normal" title="Let's Start">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goToFoodList" destination="BYZ-38-t0r" eventType="touchUpInside" id="z6o-83-kWd"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fresh Fruits!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhV-RE-QWV">
                                         <rect key="frame" x="30" y="202" width="278" height="60"/>
@@ -109,10 +117,15 @@
             <point key="canvasLocation" x="-214.49275362318843" y="130.58035714285714"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="vzQ-lO-IdL">
+            <size key="intrinsicContentSize" width="110" height="42"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Background" width="256" height="256"/>
         <namedColor name="PrimaryColor">
-            <color red="0.94947487115859985" green="0.74802064895629883" blue="0.05125882476568222" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94900000095367432" green="0.74800002574920654" blue="0.050999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
