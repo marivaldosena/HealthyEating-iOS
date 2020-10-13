@@ -18,10 +18,10 @@ class FoodListViewController: UIViewController {
         FoodCategory(categoryName: "JUICE")
         ]
     private var foodItems = [
-        Food(name: "Banana", imageName: "Banana", price: 1.20),
-        Food(name: "Apple", imageName: "Apple", price: 1.50),
-        Food(name: "Blueberry", imageName: "Blueberry", price: 1.30),
-        Food(name: "Apricot", imageName: "Apricot", price: 1.60)
+        Food(name: "Banana", imageName: "Banana", price: 1.20, quantity: 0),
+        Food(name: "Apple", imageName: "Apple", price: 1.50, quantity: 0),
+        Food(name: "Blueberry", imageName: "BlueBerry", price: 1.30, quantity: 0),
+        Food(name: "Apricot", imageName: "Apricot", price: 1.60, quantity: 0)
     ]
     
     
@@ -37,14 +37,6 @@ class FoodListViewController: UIViewController {
         
         foodItemsListCollection?.delegate = self
         foodItemsListCollection?.dataSource = self
-        
-        if let layout = foodItemsListCollection?.collectionViewLayout as? UICollectionViewFlowLayout{
-                layout.minimumLineSpacing = 10
-                layout.minimumInteritemSpacing = 10
-                layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-                let size = CGSize(width:(foodItemsListCollection!.bounds.width-30)/2, height: 250)
-                layout.itemSize = size
-        }
     }
 }
 

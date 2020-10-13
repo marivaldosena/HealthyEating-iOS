@@ -15,11 +15,13 @@ struct Food {
     var name: String
     var imageName: String
     var price: Double
+    var quantity: Int
     
-    init(name: String, imageName: String, price: Double) {
+    init(name: String, imageName: String, price: Double, quantity: Int) {
         self.name = name
         self.imageName = imageName
         self.price = price
+        self.quantity = 0
     }
  }
 
