@@ -87,10 +87,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAP-yN-TFZ" userLabel="SearchBarView">
-                                <rect key="frame" x="0.0" y="165" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="165" width="414" height="100"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" placeholder="Search here" translatesAutoresizingMaskIntoConstraints="NO" id="5G1-DP-UlK" customClass="FoodListSearchBar" customModule="HealthyEating" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="-3" width="394" height="56"/>
+                                        <rect key="frame" x="10" y="22" width="394" height="56"/>
                                         <offsetWrapper key="searchTextPositionAdjustment" horizontal="12" vertical="0.0"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -103,34 +103,34 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="5G1-DP-UlK" firstAttribute="leading" secondItem="FAP-yN-TFZ" secondAttribute="leading" constant="10" id="E2N-pC-vHA"/>
-                                    <constraint firstItem="5G1-DP-UlK" firstAttribute="centerY" secondItem="FAP-yN-TFZ" secondAttribute="centerY" id="O6q-TE-0ao"/>
-                                    <constraint firstAttribute="height" constant="50" id="fRo-HR-DXl"/>
+                                    <constraint firstAttribute="height" constant="100" id="fRo-HR-DXl"/>
                                     <constraint firstAttribute="trailing" secondItem="5G1-DP-UlK" secondAttribute="trailing" constant="10" id="iaI-AN-qDf"/>
+                                    <constraint firstItem="5G1-DP-UlK" firstAttribute="centerY" secondItem="FAP-yN-TFZ" secondAttribute="centerY" id="sS1-eD-988"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tRJ-zy-FER" userLabel="FoodCategoriesCollectionView">
-                                <rect key="frame" x="20" y="231" width="374" height="120"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hw4-5n-SVh">
+                                <rect key="frame" x="16" y="289" width="382" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="RHv-Hz-Glw"/>
+                                    <constraint firstAttribute="height" constant="60" id="eF4-Qt-q5v"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HWc-Ko-SIc">
-                                    <size key="itemSize" width="128" height="67"/>
-                                    <size key="estimatedItemSize" width="120" height="70"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p3e-oQ-ldq">
+                                    <size key="itemSize" width="131" height="73"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VGR-ce-cK1">
-                                <rect key="frame" x="16" y="371" width="382" height="491"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KeE-Q1-MIT">
+                                <rect key="frame" x="5" y="359" width="404" height="503"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uTT-tO-ZgA">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AF9-iA-22L">
+                                    <size key="itemSize" width="180" height="250"/>
+                                    <size key="estimatedItemSize" width="180" height="250"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
@@ -139,32 +139,33 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1Dk-gK-455" firstAttribute="leading" secondItem="k5l-Si-Raz" secondAttribute="leading" constant="5" id="04S-kN-UDJ"/>
+                            <constraint firstItem="KeE-Q1-MIT" firstAttribute="leading" secondItem="k5l-Si-Raz" secondAttribute="leading" constant="5" id="47m-Cd-a8p"/>
                             <constraint firstItem="FAP-yN-TFZ" firstAttribute="trailing" secondItem="k5l-Si-Raz" secondAttribute="trailing" id="7vS-px-1Pj"/>
                             <constraint firstItem="FAP-yN-TFZ" firstAttribute="top" secondItem="1Dk-gK-455" secondAttribute="bottom" constant="20" id="CPp-wR-n8g"/>
-                            <constraint firstItem="k5l-Si-Raz" firstAttribute="bottom" secondItem="VGR-ce-cK1" secondAttribute="bottom" id="FMw-wT-JDv"/>
-                            <constraint firstItem="tRJ-zy-FER" firstAttribute="trailing" secondItem="k5l-Si-Raz" secondAttribute="trailing" constant="-20" id="JgK-HU-cY4"/>
                             <constraint firstItem="pfp-Xi-zT8" firstAttribute="trailing" secondItem="x4f-sw-ONW" secondAttribute="trailing" id="L96-nM-Mp2"/>
-                            <constraint firstItem="tRJ-zy-FER" firstAttribute="top" secondItem="FAP-yN-TFZ" secondAttribute="bottom" constant="16" id="M1o-Ce-qU3"/>
-                            <constraint firstItem="k5l-Si-Raz" firstAttribute="trailing" secondItem="VGR-ce-cK1" secondAttribute="trailing" constant="16" id="Qug-d0-PiV"/>
-                            <constraint firstItem="tRJ-zy-FER" firstAttribute="leading" secondItem="k5l-Si-Raz" secondAttribute="leading" constant="20" id="RF0-kl-078"/>
-                            <constraint firstItem="VGR-ce-cK1" firstAttribute="leading" secondItem="k5l-Si-Raz" secondAttribute="leading" constant="16" id="Rmx-aM-nIE"/>
+                            <constraint firstItem="k5l-Si-Raz" firstAttribute="bottom" secondItem="KeE-Q1-MIT" secondAttribute="bottom" id="c28-y7-bwR"/>
+                            <constraint firstItem="Hw4-5n-SVh" firstAttribute="trailing" secondItem="k5l-Si-Raz" secondAttribute="trailing" constant="-16" id="cbA-WM-F9e"/>
                             <constraint firstItem="1Dk-gK-455" firstAttribute="bottom" secondItem="k5l-Si-Raz" secondAttribute="bottom" constant="-717" id="coI-3m-bc6"/>
                             <constraint firstItem="pfp-Xi-zT8" firstAttribute="top" secondItem="x4f-sw-ONW" secondAttribute="top" constant="15" id="eEF-rD-dol"/>
+                            <constraint firstItem="Hw4-5n-SVh" firstAttribute="leading" secondItem="k5l-Si-Raz" secondAttribute="leading" constant="16" id="erZ-mX-uV8"/>
                             <constraint firstItem="pfp-Xi-zT8" firstAttribute="leading" secondItem="x4f-sw-ONW" secondAttribute="leading" id="jBf-lM-E0d"/>
                             <constraint firstItem="1Dk-gK-455" firstAttribute="trailing" secondItem="k5l-Si-Raz" secondAttribute="trailing" constant="-5" id="n9Q-xO-9uL"/>
-                            <constraint firstItem="VGR-ce-cK1" firstAttribute="top" secondItem="tRJ-zy-FER" secondAttribute="bottom" constant="20" id="nFt-2U-GrY"/>
+                            <constraint firstItem="k5l-Si-Raz" firstAttribute="trailing" secondItem="KeE-Q1-MIT" secondAttribute="trailing" constant="5" id="os6-WN-o8C"/>
                             <constraint firstItem="1Dk-gK-455" firstAttribute="top" secondItem="pfp-Xi-zT8" secondAttribute="bottom" constant="16" id="qF2-vY-RO4"/>
                             <constraint firstItem="FAP-yN-TFZ" firstAttribute="leading" secondItem="k5l-Si-Raz" secondAttribute="leading" id="s3I-GD-clV"/>
+                            <constraint firstItem="Hw4-5n-SVh" firstAttribute="top" secondItem="FAP-yN-TFZ" secondAttribute="bottom" constant="24" id="ysF-If-QA1"/>
+                            <constraint firstItem="KeE-Q1-MIT" firstAttribute="top" secondItem="Hw4-5n-SVh" secondAttribute="bottom" constant="10" id="zJG-SK-KXN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="pbt-0j-3Vr"/>
                     <connections>
-                        <outlet property="foodCategoriesListCollection" destination="tRJ-zy-FER" id="Mk6-Gc-HPB"/>
-                        <outlet property="foodItemsListCollection" destination="VGR-ce-cK1" id="IqZ-y2-qsX"/>
+                        <outlet property="foodCategoriesListCollection" destination="Hw4-5n-SVh" id="5aD-vl-fB3"/>
+                        <outlet property="foodItemsListCollection" destination="KeE-Q1-MIT" id="2aO-Z6-7jA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMg-Jo-yPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-391.304347826087" y="130.58035714285714"/>
+            <point key="canvasLocation" x="518.84057971014499" y="130.58035714285714"/>
         </scene>
     </scenes>
     <designables>

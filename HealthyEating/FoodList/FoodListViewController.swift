@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK: - FoodListViewController: UIViewController
 class FoodListViewController: UIViewController {
     @IBOutlet weak var foodCategoriesListCollection: UICollectionView?
     @IBOutlet weak var foodItemsListCollection: UICollectionView?
@@ -36,12 +37,22 @@ class FoodListViewController: UIViewController {
         
         foodItemsListCollection?.delegate = self
         foodItemsListCollection?.dataSource = self
+        
+        if let layout = foodItemsListCollection?.collectionViewLayout as? UICollectionViewFlowLayout{
+                layout.minimumLineSpacing = 10
+                layout.minimumInteritemSpacing = 10
+                layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+                let size = CGSize(width:(foodItemsListCollection!.bounds.width-30)/2, height: 250)
+                layout.itemSize = size
+        }
     }
 }
 
+//MARK: - FoodListViewController: UICollectionViewDelegate
 extension FoodListViewController: UICollectionViewDelegate {
 }
 
+//MARK: - FoodListViewController: UICollectionViewDataSource
 extension FoodListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -58,10 +69,10 @@ extension FoodListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         switch collectionView {
-//        case foodItemsListCollection:
-//            return self.getFoodCategoryCellInstance(collectionView, indexPath)
-        case foodCategoriesListCollection:
+        case foodItemsListCollection:
             return self.getFoodItemCellInstance(collectionView, indexPath)
+        case foodCategoriesListCollection:
+            return self.getFoodCategoryCellInstance(collectionView, indexPath)
         default:
             return collectionView.dequeueReusableCell(withReuseIdentifier: "FoodCategoryCollectionViewCell", for: indexPath)
         }
