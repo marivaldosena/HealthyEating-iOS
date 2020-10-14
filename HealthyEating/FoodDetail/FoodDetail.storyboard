@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sKz-Bf-g3v">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Food Detail View Controller-->
+        <scene sceneID="sW6-Ci-O7L">
+            <objects>
+                <viewController id="sKz-Bf-g3v" customClass="FoodDetailViewController" customModule="HealthyEating" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kMJ-Fi-0X5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KRx-et-bLe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDA-HV-6VR" userLabel="TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banana" translatesAutoresizingMaskIntoConstraints="NO" id="fvH-Y1-xG7">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVv-P1-HRh" userLabel="HeaderView">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvv-s7-zD9">
+                                                        <rect key="frame" x="20" y="16" width="48" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="Gnv-er-qmI"/>
+                                                            <constraint firstAttribute="width" constant="48" id="i0Z-Fj-MkC"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <state key="normal" image="chevron.left" catalog="system">
+                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="goToList" destination="sKz-Bf-g3v" eventType="touchUpInside" id="Bj0-bN-f8t"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afs-S6-2XW" customClass="RoundedButton" customModule="HealthyEating" customModuleProvider="target">
+                                                        <rect key="frame" x="346" y="16" width="48" height="48"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="38w-5G-6Q3"/>
+                                                            <constraint firstAttribute="width" constant="48" id="XBZ-Kb-RFE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="tintColor" name="PrimaryColor"/>
+                                                        <state key="normal" image="cart.fill" catalog="system">
+                                                            <color key="titleColor" name="PrimaryColor"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="1Fu-sg-yaU"/>
+                                                    <constraint firstItem="Gvv-s7-zD9" firstAttribute="centerY" secondItem="LVv-P1-HRh" secondAttribute="centerY" id="N42-Dv-xOG"/>
+                                                    <constraint firstItem="afs-S6-2XW" firstAttribute="centerY" secondItem="LVv-P1-HRh" secondAttribute="centerY" id="S9u-NF-Ii4"/>
+                                                    <constraint firstItem="Gvv-s7-zD9" firstAttribute="leading" secondItem="LVv-P1-HRh" secondAttribute="leading" constant="20" id="TbP-cX-SGn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="afs-S6-2XW" secondAttribute="trailing" constant="20" id="wW2-s4-Yxk"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fvH-Y1-xG7" firstAttribute="top" secondItem="KDA-HV-6VR" secondAttribute="top" id="OrN-9c-M2O"/>
+                                            <constraint firstItem="fvH-Y1-xG7" firstAttribute="trailing" secondItem="KDA-HV-6VR" secondAttribute="trailing" id="TI3-Pe-auN"/>
+                                            <constraint firstItem="LVv-P1-HRh" firstAttribute="leading" secondItem="KDA-HV-6VR" secondAttribute="leading" id="VXG-NS-jxR"/>
+                                            <constraint firstAttribute="trailing" secondItem="LVv-P1-HRh" secondAttribute="trailing" id="Vwt-wv-zxT"/>
+                                            <constraint firstItem="fvH-Y1-xG7" firstAttribute="leading" secondItem="KDA-HV-6VR" secondAttribute="leading" id="WW4-pY-Wwi"/>
+                                            <constraint firstItem="LVv-P1-HRh" firstAttribute="top" secondItem="KDA-HV-6VR" secondAttribute="top" id="s64-5K-BHf"/>
+                                            <constraint firstAttribute="bottom" secondItem="fvH-Y1-xG7" secondAttribute="bottom" id="tPC-dO-tw6"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5A-mJ-EFM" userLabel="BottomView">
+                                        <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="w5A-mJ-EFM" firstAttribute="leading" secondItem="KRx-et-bLe" secondAttribute="leading" id="AXZ-W5-FyI"/>
+                                    <constraint firstItem="KDA-HV-6VR" firstAttribute="leading" secondItem="KRx-et-bLe" secondAttribute="leading" id="GJ4-hy-Wq0"/>
+                                    <constraint firstAttribute="bottom" secondItem="w5A-mJ-EFM" secondAttribute="bottom" id="JM1-ED-lyT"/>
+                                    <constraint firstItem="w5A-mJ-EFM" firstAttribute="top" secondItem="KDA-HV-6VR" secondAttribute="bottom" id="VzU-Dy-LAa"/>
+                                    <constraint firstItem="KDA-HV-6VR" firstAttribute="top" secondItem="KRx-et-bLe" secondAttribute="top" id="as0-Q2-3b6"/>
+                                    <constraint firstItem="w5A-mJ-EFM" firstAttribute="top" secondItem="KDA-HV-6VR" secondAttribute="bottom" id="krc-zQ-4gz"/>
+                                    <constraint firstAttribute="trailing" secondItem="w5A-mJ-EFM" secondAttribute="trailing" id="rvB-ek-GKJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="KDA-HV-6VR" secondAttribute="trailing" id="sRO-8B-Fg8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G5h-ul-Zgr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KRx-et-bLe" firstAttribute="top" secondItem="kMJ-Fi-0X5" secondAttribute="top" id="50j-22-XAP"/>
+                            <constraint firstItem="KRx-et-bLe" firstAttribute="bottom" secondItem="kMJ-Fi-0X5" secondAttribute="bottom" id="E3i-en-u96"/>
+                            <constraint firstItem="KRx-et-bLe" firstAttribute="leading" secondItem="kMJ-Fi-0X5" secondAttribute="leading" id="Krp-3w-OL2"/>
+                            <constraint firstItem="KRx-et-bLe" firstAttribute="trailing" secondItem="kMJ-Fi-0X5" secondAttribute="trailing" id="OAe-KJ-Z8e"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3AD-R8-KV5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-339" y="-4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Banana" width="160" height="160"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <namedColor name="PrimaryColor">
+            <color red="0.94900000095367432" green="0.74800002574920654" blue="0.050999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -117,11 +117,6 @@
             <point key="canvasLocation" x="-214.49275362318843" y="130.58035714285714"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="vzQ-lO-IdL">
-            <size key="intrinsicContentSize" width="110" height="42"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Background" width="256" height="256"/>
         <namedColor name="PrimaryColor">

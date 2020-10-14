@@ -40,8 +40,24 @@ class FoodListViewController: UIViewController {
     }
 }
 
+//MARK: - FoodListViewController
+extension FoodListViewController {
+    static func goToDetail(foodItem: Food?) {
+        let parentController = self.init()
+        
+        if let viewController = UIStoryboard(name: "FoodDetail", bundle: nil).instantiateInitialViewController() as? FoodDetailViewController {
+            parentController.navigationController?.pushViewController(viewController, animated: true)
+        } 
+    }
+}
+
 //MARK: - FoodListViewController: UICollectionViewDelegate
 extension FoodListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let viewController = UIStoryboard(name: "FoodDetail", bundle: nil).instantiateInitialViewController() as? FoodDetailViewController {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }
 
 //MARK: - FoodListViewController: UICollectionViewDataSource

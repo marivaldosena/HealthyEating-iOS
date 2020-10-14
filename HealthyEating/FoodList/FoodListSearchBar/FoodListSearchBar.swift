@@ -7,7 +7,6 @@
 
 import UIKit
 
-//@IBDesignable
 class FoodListSearchBar: UISearchBar {
     @IBInspectable var placeholderColor: UIColor? {
         didSet {

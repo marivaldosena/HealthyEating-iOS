@@ -7,7 +7,6 @@
 
 import UIKit
 
-@IBDesignable
 class FoodCategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var foodCategoryLabel: UILabel?
     @IBOutlet weak var viewContainer: UIView?

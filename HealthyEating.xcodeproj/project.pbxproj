@@ -10,6 +10,8 @@
 		C93A1D6D2533F13100E1A287 /* HomeViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D6C2533F13100E1A287 /* HomeViewControllerExtensions.swift */; };
 		C93A1D702533F1B400E1A287 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D6F2533F1B400E1A287 /* RoundedButton.swift */; };
 		C93A1D732533F8D100E1A287 /* FoodManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D722533F8D100E1A287 /* FoodManager.swift */; };
+		C93A1D932536654C00E1A287 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D922536654900E1A287 /* FoodDetailViewController.swift */; };
+		C93A1D972536655A00E1A287 /* FoodDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93A1D962536655A00E1A287 /* FoodDetail.storyboard */; };
 		C99CAD93253360F300B05C5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99CAD92253360F300B05C5F /* AppDelegate.swift */; };
 		C99CAD95253360F300B05C5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99CAD94253360F300B05C5F /* SceneDelegate.swift */; };
 		C99CAD97253360F300B05C5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99CAD96253360F300B05C5F /* HomeViewController.swift */; };
@@ -30,6 +32,8 @@
 		C93A1D6C2533F13100E1A287 /* HomeViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerExtensions.swift; sourceTree = "<group>"; };
 		C93A1D6F2533F1B400E1A287 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		C93A1D722533F8D100E1A287 /* FoodManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodManager.swift; sourceTree = "<group>"; };
+		C93A1D922536654900E1A287 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		C93A1D962536655A00E1A287 /* FoodDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodDetail.storyboard; sourceTree = "<group>"; };
 		C99CAD8F253360F300B05C5F /* HealthyEating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthyEating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99CAD92253360F300B05C5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C99CAD94253360F300B05C5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C93A1D912536653200E1A287 /* FoodDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C93A1D962536655A00E1A287 /* FoodDetail.storyboard */,
+				C93A1D922536654900E1A287 /* FoodDetailViewController.swift */,
+			);
+			path = FoodDetail;
+			sourceTree = "<group>";
+		};
 		C99CAD86253360F300B05C5F = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,7 @@
 		C99CAD91253360F300B05C5F /* HealthyEating */ = {
 			isa = PBXGroup;
 			children = (
+				C93A1D912536653200E1A287 /* FoodDetail */,
 				C99CADAB253381BA00B05C5F /* FoodList */,
 				C99CADA72533657800B05C5F /* Home */,
 				C99CAD92253360F300B05C5F /* AppDelegate.swift */,
@@ -207,6 +221,7 @@
 			files = (
 				C99CADE325339F4500B05C5F /* FoodItemCollectionViewCell.xib in Resources */,
 				C99CAD9F2533610B00B05C5F /* LaunchScreen.storyboard in Resources */,
+				C93A1D972536655A00E1A287 /* FoodDetail.storyboard in Resources */,
 				C99CADD825339B6200B05C5F /* FoodCategoryCollectionViewCell.xib in Resources */,
 				C99CADB02533821B00B05C5F /* FoodList.storyboard in Resources */,
 				C99CAD9C2533610B00B05C5F /* Assets.xcassets in Resources */,
@@ -224,6 +239,7 @@
 				C99CAD97253360F300B05C5F /* HomeViewController.swift in Sources */,
 				C93A1D702533F1B400E1A287 /* RoundedButton.swift in Sources */,
 				C99CADAD253381ED00B05C5F /* FoodListViewController.swift in Sources */,
+				C93A1D932536654C00E1A287 /* FoodDetailViewController.swift in Sources */,
 				C99CAD93253360F300B05C5F /* AppDelegate.swift in Sources */,
 				C93A1D732533F8D100E1A287 /* FoodManager.swift in Sources */,
 				C99CAD95253360F300B05C5F /* SceneDelegate.swift in Sources */,

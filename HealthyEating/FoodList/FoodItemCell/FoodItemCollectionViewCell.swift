@@ -7,7 +7,6 @@
 
 import UIKit
 
-@IBDesignable
 class FoodItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var foodImageView: UIImageView?
     @IBOutlet weak var foodNameLabel: UILabel?
@@ -80,8 +79,6 @@ class FoodItemCollectionViewCell: UICollectionViewCell {
         if gestureRecognizer.state == .ended {
             if let imageView = gestureRecognizer.view as? UIImageView {
                 switch imageView {
-                case foodImageView:
-                    print("Image!")
                 case starImageView:
                     self.changeStarImage()
                 default:

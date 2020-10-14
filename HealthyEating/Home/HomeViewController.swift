@@ -15,8 +15,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func goToFoodList() {
-        if let viewController = UIStoryboard(name: "FoodList", bundle: nil).instantiateInitialViewController() as? FoodListViewController {
-            navigationController?.pushViewController(viewController, animated: true)
+        if let uiNavigationController = UIStoryboard(name: "FoodList", bundle: nil).instantiateInitialViewController() as? UINavigationController  {
+            
+            if let viewController = uiNavigationController.topViewController as? FoodListViewController {
+                navigationController?.pushViewController(viewController, animated: true)
+            }
         }
     }
 }
